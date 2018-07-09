@@ -3,7 +3,7 @@
  * Created by Lance.
  * Date: 2018/07/04 15:14
  */
-class ApiController extends CI_Controller
+class Api extends CI_Controller
 {
     public function __construct()
     {
