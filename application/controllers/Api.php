@@ -59,7 +59,6 @@ class Api extends CI_Controller
         if(!$openId || $openId == null) {
             return $this->returndatamanager->buildReturnData('E0002');
         }
-        log_message('debug', '保存用户数据..................');
         $user = $this->user->getUserByOpenId($openId);
         if(!$user) {
             $nickname = $this->input->post('nickname');
