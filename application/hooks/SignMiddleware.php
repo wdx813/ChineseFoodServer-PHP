@@ -20,7 +20,7 @@ class SignMiddleware
 
     public function __construct()
     {
-        $this->CI = &get_instance();
+        $this->CI = & get_instance();
         $this->CI->load->model('loginToken');
     }
 
@@ -46,6 +46,7 @@ class SignMiddleware
             $newSign = strtoupper(md5($paramStr));
             log_message('debug', 'lance===='.$newSign);
             if($newSign !== $sign) {
+                log_message('debug', 'lance====签名验证失败');
                 return $this->CI->returndatamanager->buildReturnData('E0005');
             }
         }

@@ -22,7 +22,8 @@ class User extends CI_Model
             'nickname' => $nickname,
             'gender' => $gender,
             'avatar' => $avatar,
-            'taste_num' => 0
+            'taste_num' => 0,
+            'create_time' => date('Y-m-d H:i:s')
         );
 
         $this->db->trans_start();

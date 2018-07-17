@@ -19,7 +19,8 @@ class LoginToken extends CI_Model
     public function saveToken($openId, $token) {
         $data = array(
             'openId' => $openId,
-            'token' => $token
+            'token' => $token,
+            'create_time' => date('Y-m-d H:i:s')
         );
         $this->db->trans_start();
         $this->db->insert('t_login_token', $data);
